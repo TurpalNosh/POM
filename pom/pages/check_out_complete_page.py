@@ -1,9 +1,9 @@
-from base.base_page import BasePage
+from pom.base.base_page import BasePage
 
 class CheckOutComplete(BasePage):
 
     _PAGE_URL = "https://www.saucedemo.com/checkout-complete.html"
-    _BACK_HOME_BUTTON = "//button[@id ='back-to-products']"
+    _BACK_HOME_BUTTON = "xpath","//button[@id ='back-to-products']"
 
     def button_back_home(self):
         self.driver.find_element(*self._BACK_HOME_BUTTON).click()

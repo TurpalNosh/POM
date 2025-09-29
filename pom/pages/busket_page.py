@@ -1,11 +1,12 @@
 
-from base.base_page import BasePage
+from pom.base.base_page import BasePage
 
 class BuskPage(BasePage):
 
     PAGE_URL = "https://www.saucedemo.com/cart.html"
-    BUSK_BADGE = "//span[@class='shopping_cart_badge']"
-    CHECK_OUT_BUTTON =  "//a[@class='shopping_cart_link']"
+    BUSK_BADGE = "xpath","//span[@class='shopping_cart_badge']"
+    CHECK_OUT_BUTTON = "xpath","//button[@id='checkout']"
+
 
 
     def count_items(self):
